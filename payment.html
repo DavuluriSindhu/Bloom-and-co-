@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Checkout — Bloom & Thread</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="brand" onclick="location.href='index.html'">
+      <div class="logo">B&amp;T</div>
+      <div>
+        <div class="brand-title">Bloom & Thread</div>
+        <div class="tiny muted">checkout</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="payment-wrap">
+    <section class="payment-card">
+      <h2>Complete your payment</h2>
+
+      <div id="orderSummary" class="order-summary"></div>
+
+      <form id="paymentForm" onsubmit="return handlePay(event)">
+        <div class="row">
+          <div class="col">
+            <label>Full name</label>
+            <input id="name" type="text" required placeholder="Jane Doe">
+          </div>
+          <div class="col">
+            <label>Email</label>
+            <input id="email" type="email" required placeholder="you@example.com">
+          </div>
+        </div>
+
+        <div style="margin-top:12px">
+          <label>Payment method</label>
+          <select id="method">
+            <option value="demo">Demo (no real charge)</option>
+            <option value="stripe">Stripe (redirect - needs server)</option>
+            <option value="razorpay">Razorpay (checkout - needs server)</option>
+          </select>
+        </div>
+
+        <div style="margin-top:18px; display:flex; justify-content:flex-end;">
+          <button class="btn" type="submit">Pay now</button>
+        </div>
+
+        <p class="muted tiny" style="margin-top:12px;">
+          This demo simulates payment locally. To accept real payments integrate Stripe or Razorpay server-side:
+          create a Checkout Session (Stripe) or an Order (Razorpay) on your backend and then redirect to the provider.
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    // show order summary when page loads
+    document.addEventListener('DOMContentLoaded', ()=>{
+      initTheme();
+      renderOrderSummary();
+    });
+  </script>
+</body>
+</html>
