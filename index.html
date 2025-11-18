@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bloom & Thread — Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="brand" onclick="location.href='index.html'">
+      <div class="logo">B&amp;T</div>
+      <div>
+        <div class="brand-title">Bloom & Thread</div>
+        <div class="tiny muted">colorful • conscious • crafted</div>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <div class="searchbar">
+        <input id="search" placeholder="Search products... (try: floral, denim)" oninput="renderProducts()">
+      </div>
+
+      <button class="icon-btn" onclick="toggleTheme()">
+        <span id="themeIcon">🌙</span>
+      </button>
+
+      <button class="cart-btn" onclick="openCart()">
+        🛒 <span id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-left">
+      <h1>Brighten your wardrobe — curated seasonal pieces</h1>
+      <p class="muted">Handpicked styles, lively colors & cozy fits. Add favorites to cart and check out with a smooth payment flow.</p>
+      <div class="hero-cta">
+        <button class="btn" onclick="document.getElementById('grid').scrollIntoView({behavior:'smooth'})">Shop Now</button>
+        <button class="btn ghost" onclick="applyTag('New')">New Arrivals</button>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="https://images.unsplash.com/photo-1520975919479-7f67b6b916bd?q=80&w=1200&auto=format&fit=crop" alt="banner">
+    </div>
+  </section>
+
+  <main>
+    <div class="controls">
+      <div class="chips">
+        <button class="chip" onclick="applyTag('All')">All</button>
+        <button class="chip" onclick="applyTag('Women')">Women</button>
+        <button class="chip" onclick="applyTag('Men')">Men</button>
+        <button class="chip" onclick="applyTag('Jackets')">Jackets</button>
+        <button class="chip" onclick="applyTag('Casual')">Casual</button>
+        <button class="chip" onclick="applyTag('New')">New</button>
+      </div>
+
+      <div class="sort-wrap">
+        <label class="tiny muted">Sort</label>
+        <select id="sort" onchange="renderProducts()">
+          <option value="popular">Popular</option>
+          <option value="low">Price: Low → High</option>
+          <option value="high">Price: High → Low</option>
+        </select>
+      </div>
+    </div>
+
+    <section id="grid" class="grid"></section>
+  </main>
+
+  <!-- Cart drawer -->
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true">
+    <div class="cart-head">
+      <h3>Your Cart</h3>
+      <button class="icon-btn" onclick="closeCart()">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-foot">
+      <div class="cart-total">Total: <strong id="cartTotal">₹0</strong></div>
+      <div style="display:flex; gap:10px; margin-top:12px;">
+        <button class="btn ghost" onclick="clearCart()">Clear</button>
+        <button class="btn" onclick="goToPayment()">Checkout</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Product quickview modal -->
+  <div id="modal" class="modal" onclick="closeModal(event)">
+    <div class="modal-card" role="dialog" aria-modal="true">
+      <button class="icon-btn modal-close" onclick="closeModal(event)">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    // initial render
+    initSite();
+  </script>
+</body>
+</html>
