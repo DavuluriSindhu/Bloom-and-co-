@@ -12,9 +12,9 @@ const SAMPLE_PRODUCTS = [
   {id:'p3', title:'Lightweight Denim Jacket', price:1799, tags:['Women','Jackets'], img:'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop'},
   {id:'p4', title:'Striped Casual Shirt', price:699, tags:['Men','Casual'], img:'https://images.unsplash.com/photo-1591224615614-e300d72e37c5?q=80&w=451&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'},
   {id:'p5', title:'Elegant Blazer', price:2499, tags:['Women','Jackets'], img:'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1200&auto=format&fit=crop'},
-  {id:'p6', title:'Comfort Hoodie', price:1199, tags:['Men','New'], img:'https://images.unsplash.com/photo-1551854838-9f6d4a0d76d6?q=80&w=1200&auto=format&fit=crop'},
-  {id:'p7', title:'Boho Maxi Skirt', price:899, tags:['Women','Casual'], img:'https://images.unsplash.com/photo-1520975680246-1e6c9a1f3c6f?q=80&w=1200&auto=format&fit=crop'},
-  {id:'p8', title:'Tailored Chinos', price:1399, tags:['Men'], img:'https://images.unsplash.com/photo-1520975919479-7f67b6b916bd?q=80&w=1200&auto=format&fit=crop'}
+  {id:'p6', title:'Comfort Hoodie', price:1199, tags:['Men','New'], img:'https://images.unsplash.com/photo-1580866506537-487a3d03934c?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'},
+  {id:'p7', title:'Boho Maxi Skirt', price:899, tags:['Women','Casual'], img:'https://images.unsplash.com/photo-1527332042004-0b1a4d8646a3?q=80&w=388&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'},
+  {id:'p8', title:'Tailored Chinos', price:1399, tags:['Men'], img:'https://media.istockphoto.com/id/1086374462/photo/young-man-standing-on-a-concrete-road-unique-photo.webp?a=1&b=1&s=612x612&w=0&k=20&c=o7uVsefl9Q7JXgehV_zyePm5c6TDFMFIinasW-e4BwE='}
 ];
 
 if(!localStorage.getItem('bt_products')) localStorage.setItem('bt_products', JSON.stringify(SAMPLE_PRODUCTS));
