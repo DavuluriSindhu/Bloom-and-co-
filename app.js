@@ -10,7 +10,7 @@ const SAMPLE_PRODUCTS = [
   {id:'p1', title:'Floral Summer Dress', price:999, tags:['Women','New','Casual'], img:'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200&auto=format&fit=crop'},
   {id:'p2', title:'Classic White Tee', price:499, tags:['Men','Casual'], img:'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1200&auto=format&fit=crop'},
   {id:'p3', title:'Lightweight Denim Jacket', price:1799, tags:['Women','Jackets'], img:'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop'},
-  {id:'p4', title:'Striped Casual Shirt', price:699, tags:['Men','Casual'], img:'https://unsplash.com/photos/man-in-black-and-white-striped-crew-neck-t-shirt-sitting-on-white-plastic-chair-CO5uWKEo5mY'},
+  {id:'p4', title:'Striped Casual Shirt', price:699, tags:['Men','Casual'], img:'https://images.unsplash.com/photo-1591224615614-e300d72e37c5?q=80&w=451&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'},
   {id:'p5', title:'Elegant Blazer', price:2499, tags:['Women','Jackets'], img:'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1200&auto=format&fit=crop'},
   {id:'p6', title:'Comfort Hoodie', price:1199, tags:['Men','New'], img:'https://images.unsplash.com/photo-1551854838-9f6d4a0d76d6?q=80&w=1200&auto=format&fit=crop'},
   {id:'p7', title:'Boho Maxi Skirt', price:899, tags:['Women','Casual'], img:'https://images.unsplash.com/photo-1520975680246-1e6c9a1f3c6f?q=80&w=1200&auto=format&fit=crop'},
