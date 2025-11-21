@@ -347,7 +347,7 @@ function goToPayment(){
   let total = 0;
   Object.values(grouped).forEach(it => total += it.price * it.qty);
   localStorage.setItem('bt_checkout', JSON.stringify({ items: Object.values(grouped), total }));
-  location.href = 'payment.html';
+  location.href = 'https://bloomandtread.netlify.app/payment.html';
 }
 
 /* Payment page helpers */
