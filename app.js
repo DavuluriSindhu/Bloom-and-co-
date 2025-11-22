@@ -233,7 +233,7 @@ function goToPayment(){
   // store summary into localStorage to show on payment page
   localStorage.setItem('bt_checkout', JSON.stringify({items: Object.values(grouped), total}));
   // navigate to payment page
-  location.href = 'https://verdant-nougat-15c410.netlify.app/payment.html';
+  location.href = 'payment.html';
 }
 
 /* Payment page helpers */
