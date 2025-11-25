@@ -233,7 +233,7 @@ function goToPayment(){
   // store summary into localStorage to show on payment page
   localStorage.setItem('bt_checkout', JSON.stringify({items: Object.values(grouped), total}));
   // navigate to payment page
-  location.href = 'payment.html';
+  location.href = 'https://neon-basbousa-5510b8.netlify.app/payment';
 }
 
 /* Payment page helpers */
